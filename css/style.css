@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: hsl(0, 36%, 70%);
+}
+
+img {
+    height: auto;
+}
+
+.logo {
+    margin: 25px;
+    width: 100px;
+}
+
+.hero-image {
+    height: 300px;
+    background-image: url(../images/hero-mobile.jpg);
+    background-size: cover;
+}
+
+.main-content {
+    text-align: center;
+    max-width: 325px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 3em;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 60px;
+}
+
+.text-dark {
+    color: hsl(0, 6%, 24%);
+    font-weight: 600;
+}
+
+p{
+    line-height: 1.35em;
+    margin: 0;
+}
+
+form {
+    margin: 50px 0 100px;
+}
+
+form input, form button {
+    height: 40px;
+    border: 1px solid hsl(0, 36%, 70%);
+    border-radius: 50px;
+}
+
+form input[type="email"] {
+    width: 90%;
+    padding: 10px 20px;
+}
+
+form input::placeholder {
+    color: hsl(0, 36%, 70%);
+}
+
+form input[type="email"]:focus,
+form button:focus {
+    box-shadow: 0 0 10px hsl(0, 93%, 68%);
+}
+
+form input[type="email"]:hover,
+form button:hover {
+    box-shadow: 0 0 10px hsl(0, 93%, 68%);
+}
+
+form button {
+    position: relative;
+    top: -40px;
+    left: 125px;
+    width: 20%;
+    padding: 10px 20px;
+    margin: 0;
+    cursor: pointer;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
+}
+
+@media screen and (min-width: 768px) {
+    .hero-image {
+        background-image: url(../images/hero-desktop.jpg);
+        height: 600px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+       background: #000;
+    }
+}
