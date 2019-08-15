@@ -9,6 +9,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     color: hsl(0, 36%, 70%);
+    height: 100vh;
 }
 
 img {
@@ -20,11 +21,11 @@ img {
     width: 100px;
 }
 
-.hero-image {
+/* .hero-image {
     height: 300px;
     background-image: url(../images/hero-mobile.jpg);
     background-size: cover;
-}
+} */
 
 .main-content {
     text-align: center;
@@ -82,7 +83,7 @@ form button:hover {
 form button {
     position: relative;
     top: -40px;
-    left: 125px;
+    left: 115px;
     width: 20%;
     padding: 10px 20px;
     margin: 0;
@@ -90,15 +91,42 @@ form button {
     background: linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
 }
 
-@media screen and (min-width: 768px) {
-    .hero-image {
-        background-image: url(../images/hero-desktop.jpg);
-        height: 600px;
-    }
-}
-
 @media screen and (min-width: 1024px) {
     body {
-       background: #000;
-    }
+        height: 100vh;
+        display: grid; 
+grid-template-columns: 200px 1fr 1fr; 
+grid-template-rows: 150px 300px 150px 150px; 
+grid-column-gap: 0px;
+grid-row-gap: 0px; 
+overflow: hidden;
+}
+
+.logo, .main-content {
+    grid-column: 2/3;
+}
+
+.logo {
+    width: 180px;
+    margin: 0;
+    align-self: end;
+}
+
+.main-content {
+    margin-left: 0;
+    text-align: left;
+}
+
+form button {
+    left: 230px;
+}
+
+.hero-image {
+    grid-column: 3/4;
+min-width: 40vw;
+height: 100vh;
+width: 100%;
+    
+}
+
 }
