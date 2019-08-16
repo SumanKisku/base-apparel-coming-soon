@@ -91,6 +91,10 @@ form button {
     background: linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
 }
 
+form button:active {
+    background: linear-gradient(135deg, hsl(0, 36%, 70%), hsl(0, 36%, 70%));
+}
+
 @media screen and (min-width: 1024px) {
     body {
         height: 100vh;
